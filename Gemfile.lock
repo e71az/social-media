@@ -83,6 +83,8 @@ GEM
     diff-lcs (1.4.4)
     erubi (1.9.0)
     execjs (2.7.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -167,6 +169,14 @@ GEM
     rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
+    rspec-rails (4.0.1)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.9)
+      rspec-expectations (~> 3.9)
+      rspec-mocks (~> 3.9)
+      rspec-support (~> 3.9)
     rspec-support (3.9.3)
     rubocop (0.93.1)
       parallel (~> 1.10)
@@ -233,12 +243,14 @@ DEPENDENCIES
   coffee-rails
   composite_primary_keys
   devise
+  factory_bot
   jbuilder
   listen
   pg
   puma
   rails
   rspec
+  rspec-rails
   rubocop
   sass-rails
   spring
