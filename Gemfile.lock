@@ -70,8 +70,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    composite_primary_keys (12.0.2)
-      activerecord (~> 6.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     devise (4.7.3)
@@ -231,7 +229,6 @@ DEPENDENCIES
   bootsnap
   byebug
   coffee-rails
-  composite_primary_keys
   devise
   jbuilder
   listen
