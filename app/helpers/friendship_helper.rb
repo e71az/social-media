@@ -22,6 +22,14 @@ module FriendshipHelper
     end
   end
 
+  def friendship_approval(user_id)
+    button_to('Accept', friendships_accept_path(user_id))
+  end
+
+  def friendship_rejection(user_id)
+    button_to('Reject', friendships_reject_path(user_id), method: :delete)
+  end
+
   private
 
   def friendship_params(friend_id)

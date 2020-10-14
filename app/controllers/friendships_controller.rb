@@ -10,9 +10,24 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    Friendship.find([current_user.id, params[:id]]).destroy
+    friend_user_id = params[:id]
+    Friendship.find([current_user.id, friend_user_id]).destroy
     # TODO: Friendships Index Path
     redirect_to users_path
+  end
+
+  def reject
+    Friendship.find([params[:id], current_user.id]).destroy
+    redirect_to friendships_path
+  end
+
+  def accept
+    Friendship.find([params[:id], current_user.id]).update_columns(status: true)
+    redirect_to friendships_path
+  end
+
+  def index
+    @friendships = Friendship.where(status: false, friend_id: current_user.id)
   end
 
   private

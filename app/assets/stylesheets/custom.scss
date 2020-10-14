@@ -169,13 +169,12 @@ form {
 
   input[type="submit"] {
     padding: 8px;
-    width: 50%;
     border: none;
     border-radius: 4px;
     background-color: $primary-color-dark;
     color: $primary-color-light;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 550;
   }
 
   input[type="submit"]:hover {
@@ -346,26 +345,4 @@ form {
   .user-section {
     width: 50%;
   }
-}
-
-
-button {
-  display: block;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  background-color: $primary-color-dark;
-  color: $primary-color-light;
-  text-transform: uppercase;
-  font-weight: 900;
-
-  & :hover {
-    background-color: $primary-color;
-    color: #fff;
-  }
-}
-
-button[disabled] {
-  background-color: $divider-color;
-  color: $primary-color-text;
 }
