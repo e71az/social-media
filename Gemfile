@@ -44,12 +44,17 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem "database_cleaner"
+  gem "rspec-rails"
 end
 
 group :test do
   gem 'factory_bot'
   gem 'rspec'
   gem 'rspec-rails'
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
 end
 
 group :development do
