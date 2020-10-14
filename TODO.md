@@ -27,7 +27,7 @@
 
 - [X] I want to be able to add comments to posts.
 
-- [ ] I want to be able to see “Timeline” page with posts (with number of likes and comments) written by me and all my
+- [X] I want to be able to see “Timeline” page with posts (with number of likes and comments) written by me and all my
   friends (the most recent posts on the top).
 
 - [X] Timeline page should be the root page of the app.
