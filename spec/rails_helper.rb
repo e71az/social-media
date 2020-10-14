@@ -5,25 +5,20 @@ require "spec_helper"
 require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 require "capybara/rspec"
-# require 'resolv-replace'
+require 'devise'
 
-# Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
+Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
 
-# Capybara.register_driver :selenium_chrome do |app|
-#  Capybara::Selenium::Driver.new(app, browser: :chrome)
-# end
-
-# Capybara.javascript_driver = :selenium_chrome
-Capybara.register_driver :headless_chrome do |app|
-  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { args: %w(headless disable-gpu) }
-  )
-  Capybara::Selenium::Driver.new app, browser: :chrome, desired_capabilities: capabilities
+Capybara.register_driver :selenium_chrome do |app|
+ Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
+Capybara.javascript_driver = :selenium_chrome
+Capybara.server_host = 'localhost'
 
-Capybara.javascript_driver = :headless_chrome
+
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
@@ -31,6 +26,20 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+  config.include FactoryBot::Syntax::Methods
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
+  config.include Devise::Test::ControllerHelpers, type: :view
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :system
+  config.include ControllerMacros
+
+  config.include Warden::Test::Helpers
+
+
 
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)

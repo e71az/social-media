@@ -15,6 +15,7 @@ gem 'sass-rails'
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'factory_bot_rails'
 
 gem 'composite_primary_keys'
 
