@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "devise/registrations/new", type: :system do
+RSpec.describe 'devise/registrations/new', type: :system do
   describe 'User Authentication' do
     it 'Should redirect to User Sign in' do
       visit root_path

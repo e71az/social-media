@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "posts/comments/index", type: :system do
-  describe "Create Post With Comment" do
+RSpec.describe 'posts/comments/index', type: :system do
+  describe 'Create Post With Comment' do
     it 'Creates Valid Comment' do
       current_user = login_user
 

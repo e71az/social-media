@@ -10,5 +10,4 @@ module AuthenticationMacros
     click_button('Log in')
     user
   end
-
 end

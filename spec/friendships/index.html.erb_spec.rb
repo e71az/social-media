@@ -2,14 +2,14 @@ require 'rails_helper'
 
 def create_users
   user1 = login_user
-  user2 = create(:user, name: "Daniel")
+  user2 = create(:user, name: 'Daniel')
 
   [user1, user2]
 end
 
-RSpec.describe "friendships/index", type: :system do
-  describe "Friendship manipulation" do
-    it "Send a friendship request" do
+RSpec.describe 'friendships/index', type: :system do
+  describe 'Friendship manipulation' do
+    it 'Send a friendship request' do
       create_users
 
       visit users_path
@@ -17,7 +17,7 @@ RSpec.describe "friendships/index", type: :system do
       expect(page).to have_button('Cancel Request')
     end
 
-    it "Cancel a friend request" do
+    it 'Cancel a friend request' do
       create_users
 
       visit users_path
@@ -26,7 +26,7 @@ RSpec.describe "friendships/index", type: :system do
       expect(page).to have_button('Send Friend Request')
     end
 
-    it "Accept a friend request" do
+    it 'Accept a friend request' do
       user1, user2 = create_users
 
       visit users_path
@@ -42,7 +42,7 @@ RSpec.describe "friendships/index", type: :system do
       expect(page).to have_button('Unfriend')
     end
 
-    it "Reject a friend request" do
+    it 'Reject a friend request' do
       user1, user2 = create_users
 
       visit users_path

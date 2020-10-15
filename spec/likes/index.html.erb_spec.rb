@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "posts/likes/index", type: :system do
+RSpec.describe 'posts/likes/index', type: :system do
   it 'Likes Comment' do
     login_user
 
