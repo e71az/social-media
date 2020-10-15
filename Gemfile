@@ -15,8 +15,6 @@ gem 'sass-rails'
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'factory_bot_rails'
-
 gem 'composite_primary_keys'
 
 # Use CoffeeScript for .coffee assets and views
@@ -45,16 +43,17 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem "database_cleaner"
-  gem "rspec-rails"
 end
 
 group :test do
-  gem 'factory_bot'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'formulaic'
   gem 'rspec'
   gem 'rspec-rails'
-  gem "capybara"
-  gem "selenium-webdriver"
+  gem 'selenium-webdriver'
   gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
 end
 

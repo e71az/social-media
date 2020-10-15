@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "devise/registrations/new", type: :system do
-
   describe 'User Authentication' do
     it 'Should redirect to User Sign in' do
-      visit new_user_session_path
+      visit root_path
       expect(page).to have_content('Forgot your password?')
     end
 
@@ -15,8 +14,9 @@ RSpec.describe "devise/registrations/new", type: :system do
     end
 
     it 'Should be able to log in and navigate to timeline' do
-      visit root_path
       login_user
+
+      visit root_path
       click_on 'Timeline'
       expect(page).to have_content('Recent posts')
     end

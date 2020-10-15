@@ -28,3 +28,6 @@
 
 # IDEA IDE
 .idea
+
+# RSpec
+spec/examples.txt
