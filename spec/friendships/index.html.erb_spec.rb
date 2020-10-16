@@ -58,7 +58,7 @@ RSpec.describe 'friendships/index', type: :system do
       expect(page).to have_button('Send Friend Request')
     end
 
-    it "Mutual Friendship" do
+    it 'Mutual Friendship' do
       user1, user2 = create_users
 
       # Send Friend Request To User2
