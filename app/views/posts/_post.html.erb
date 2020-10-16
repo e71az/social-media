@@ -17,7 +17,7 @@
   <div class='post-comments-section'>
     <p><%= number_to_human(post.comments.size) %> comments</p>
 
-    <%= render partial: 'comments/comment', collection: post.comments %>
+    <%= render partial: 'comments/comment', collection: post.comments.order(created_at: :desc) %>
 
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |form| %>
       <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
