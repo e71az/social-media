@@ -1,4 +1,6 @@
 class Friendship < ApplicationRecord
+  validates_with FriendshipValidator::IrreflexiveFriendship
+
   # [user_id, friend_id] merged to create a Composite Key
   self.primary_keys = :user_id, :friend_id
   belongs_to :user
