@@ -7,9 +7,7 @@ require 'rspec/rails'
 require 'faker'
 require 'devise'
 require 'capybara/rspec'
-require 'database_cleaner'
 
-# require_relative 'support/authentication_macros'
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 begin
@@ -37,29 +35,6 @@ RSpec.configure do |config|
 
   # Formulaic
   config.include Formulaic::Dsl
-
-  # Database Cleaner
-  config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
-  end
-  config.before(:each) do
-    DatabaseCleaner.strategy = :transaction
-  end
-  config.before(:each, js: true) do
-    DatabaseCleaner.strategy = :truncation
-  end
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
-  config.before(:all) do
-    DatabaseCleaner.start
-  end
-  config.after(:all) do
-    DatabaseCleaner.clean
-  end
 end
 
 Shoulda::Matchers.configure do |config|
