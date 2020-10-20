@@ -12,7 +12,8 @@ Devise.setup do |config|
 
   # Omniauth config
   config.omniauth :facebook, "426798311816585", "169d0551c5569fbd78181ce3faed8654",
-  callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  callback_url: if Rails.env.production? then "https://ancient-forest-74376.herokuapp.com/users/auth/facebook/callback" else "http://localhost:3000/users/auth/facebook/callback" end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
