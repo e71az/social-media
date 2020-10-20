@@ -4,7 +4,6 @@ class FriendshipsController < ApplicationController
   def new
     friendship = Friendship.new(post_params)
     if friendship.save
-      # TODO: Friendships Index Path
       redirect_to users_path
     else
       redirect_to root_path
@@ -14,7 +13,6 @@ class FriendshipsController < ApplicationController
   def destroy
     friend_user_id = params[:id]
     Friendship.find([current_user.id, friend_user_id]).destroy
-    # TODO: Friendships Index Path
     redirect_to users_path
   end
 
