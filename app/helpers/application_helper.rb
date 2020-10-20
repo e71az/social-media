@@ -7,6 +7,14 @@ module ApplicationHelper
     end
   end
 
+  def total_likes_count(post)
+    likes = post.likes.size
+
+    content_tag(:p) do
+      number_to_human(likes) + ' likes'
+    end
+  end
+
   def like_or_dislike_btn(post)
     like = Like.find_by(post: post, user: current_user)
     if like

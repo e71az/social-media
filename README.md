@@ -6,6 +6,10 @@
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Rspec
+- Rubocop
+- Capybara
+- Factory Bot
 
 ## Live Demo
 
@@ -23,7 +27,7 @@ Postgres: >=9.5
 
 ### Setup
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
@@ -38,7 +42,7 @@ Setup database with:
 
 ### Github Actions
 
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
+To make sure the linters checks using Github Actions work properly, you should follow the next steps:
 
 1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
 2. Create the `feature/branch` and push.
@@ -70,13 +74,21 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Elias Castañeda**
+
+- Github: [@e71az](https://github.com/e71az)
+- Linkedin: [@e71az](https://www.linkedin.com/in/eliasecasta/)
+
+👤 **Daniel Sokil**
+
+- Github: [@danielsokil](https://github.com/danielsokil)
+- Linkedin: [@danielsokil](www.linkedin.com/in/daniel-sokil)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/danielsokil/social-media/issues).
 
 ## Show your support
 
