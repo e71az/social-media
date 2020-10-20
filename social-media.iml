@@ -87,6 +87,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.3, Ruby 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v1.1.0, Ruby 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v6.0.3.4, Ruby 2.7.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-controller-testing (v1.0.5, Ruby 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, Ruby 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.3.0, Ruby 2.7.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v6.0.3.4, Ruby 2.7.1) [gem]" level="application" />
