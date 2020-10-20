@@ -10,4 +10,11 @@ module AuthenticationMacros
     click_button('Log in')
     user
   end
+
+  def create_users
+    user1 = create(:user, name: 'Elias')
+    user2 = create(:user, name: 'Daniel')
+
+    [user1, user2]
+  end
 end
