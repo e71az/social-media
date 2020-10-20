@@ -17,6 +17,9 @@ gem 'uglifier'
 # gem 'mini_racer', platforms: :ruby
 gem 'composite_primary_keys'
 gem 'rails-controller-testing'
+# gem 'omniauth-github'
+gem 'omniauth-facebook'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
