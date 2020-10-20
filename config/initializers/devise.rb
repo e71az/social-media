@@ -12,7 +12,8 @@ Devise.setup do |config|
 
   # Omniauth config
   config.omniauth :facebook, "821760148642664", "733bdd6a2b0de2ba2ad024dfbea5ae42",
-  callback_url: "http://localhost:3000/auth/facebook/callback"
+  callback_url: "https://ancient-forest-74376.herokuapp.com/auth/facebook/callback"
+  # https://ancient-forest-74376.herokuapp.com/users/sign_in
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
