@@ -13,5 +13,13 @@ RSpec.describe Post, type: :model do
         raise_error(ActiveRecord::RecordInvalid, 'Validation failed: User must exist')
       )
     end
+
+    it 'Belongs to User' do
+      should belong_to(:user)
+    end
+
+    it 'Creates A Valid Post' do
+      expect(create(:post)).to be_valid
+    end
   end
 end

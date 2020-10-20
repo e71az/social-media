@@ -54,6 +54,7 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
   gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
 end
 
