@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -25,3 +24,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# IDEA IDE
+.idea
+
+# RSpec
+spec/examples.txt
