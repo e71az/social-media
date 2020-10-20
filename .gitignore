@@ -6,7 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -28,3 +27,6 @@
 
 # IDEA IDE
 .idea
+
+# RSpec
+spec/examples.txt

@@ -15,6 +15,8 @@ gem 'sass-rails'
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'composite_primary_keys'
+gem 'rails-controller-testing'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
@@ -45,8 +47,16 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'formulaic'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'webdrivers', require: !ENV['SELENIUM_REMOTE_URL']
 end
 
 group :development do

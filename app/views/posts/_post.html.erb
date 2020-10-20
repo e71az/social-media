@@ -5,6 +5,8 @@
     </div>
     <div class='post-liking'>
       <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
+
+      <%= total_likes_count(post) %>
       <%= like_or_dislike_btn(post) %>
     </div>
   </div>
@@ -13,7 +15,9 @@
   </p>
 
   <div class='post-comments-section'>
-    <%= render partial: 'comments/comment', collection: post.comments %>
+    <p><%= number_to_human(post.comments.size) %> comments</p>
+
+    <%= render partial: 'comments/comment', collection: post.comments.order(created_at: :desc) %>
 
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |form| %>
       <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
